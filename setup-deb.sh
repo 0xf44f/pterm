@@ -12,7 +12,17 @@ sudo chmod +x fd && ./fd
 echo "Installing fzf\n"
 wget -q https://script.install.devinsideyou.com/fzf
 chmod +x fzf && ./fzf
+
+echo "Installing tree\n"
 apt-get install tree
+
+echo "Installing bat\n"
+wget -q https://script.install.devinsideyou.com/bat
+sudo chmod +x bat && ./bat
+
+echo "Installing jq\n"
+apt-get install jq
+
 echo "# fzf" >> /root/.profile
 echo "export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'" >> /root/.profile 
 echo "export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'" >> /root/.profile
@@ -22,3 +32,6 @@ echo "export FZF_CTRL_T_OPTS=\"--preview 'bat --color=always --line-range :50 {}
 
 echo "export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'" >> /root/.profile
 echo "export FZF_ALT_C_OPTS=\"--preview 'tree -C {} | head -50'\"" >> /root/.profile
+
+
+
