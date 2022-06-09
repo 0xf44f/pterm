@@ -23,15 +23,17 @@ sudo chmod +x bat && ./bat
 echo "Installing jq\n"
 apt-get install jq
 
-echo "# fzf" >> /root/.profile
-echo "export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'" >> /root/.profile 
-echo "export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'" >> /root/.profile
+echo "# fzf" >> /root/.zprofile
+echo "export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'" >> /root/.zprofile 
+echo "export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'" >> /root/.zprofile
 
-echo "export FZF_CTRL_T_COMMAND=\"$FZF_DEFAULT_COMMAND\"" >> /root/.profile
-echo "export FZF_CTRL_T_OPTS=\"--preview 'bat --color=always --line-range :50 {}'\"" >> /root/.profile
+echo "export FZF_CTRL_T_COMMAND=\"$FZF_DEFAULT_COMMAND\"" >> /root/.zprofile
+echo "export FZF_CTRL_T_OPTS=\"--preview 'bat --color=always --line-range :50 {}'\"" >> /root/.zprofile
 
-echo "export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'" >> /root/.profile
-echo "export FZF_ALT_C_OPTS=\"--preview 'tree -C {} | head -50'\"" >> /root/.profile
+echo "export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'" >> /root/.zprofile
+echo "export FZF_ALT_C_OPTS=\"--preview 'tree -C {} | head -50'\"" >> /root/.zprofile
+
+echo "source ~/.zprofile" >> ~/.zshrc
 
 
 
