@@ -12,7 +12,7 @@ sudo chmod +x fd && ./fd
 echo "Installing fzf\n"
 wget -q https://script.install.devinsideyou.com/fzf
 chmod +x fzf && ./fzf
-
+apt-get install tree
 echo "# fzf" >> /root/.profile
 echo "export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'" >> /root/.profile 
 echo "export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'" >> /root/.profile
