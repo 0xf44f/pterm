@@ -34,6 +34,7 @@ echo "export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'" >> /root/
 echo "export FZF_ALT_C_OPTS=\"--preview 'tree -C {} | head -50'\"" >> /root/.zprofile
 
 echo "source ~/.zprofile" >> ~/.zshrc
+echo "bindkey -s '^o' 'vim $(fzf)^M'" >> ~/.zshrc
 
 
 
